@@ -49,9 +49,9 @@ public class OperadorServiceImpl implements OperadorService {
 
     @Override
     public void update(Long id, UpdateOperadorDto dto) {
-        // Busca a conta
+        // Busca um Operador
         Operador operador = operadorRepository.findById(id).get();
-        // Valida se a conta existe
+        // Valida se o operador existe
         if (operador == null) {
             throw new RuntimeException("Operador Não Encontrado");
         }

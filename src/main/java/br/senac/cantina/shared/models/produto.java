@@ -2,65 +2,88 @@ package br.senac.cantina.shared.models;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("produtos")
 public class Produto {
     // Criar os atributos para a tabela Produto
-    private int id;
-    private char nome;
-    private char descricao;
-    private double preco;
-    private float quantidade;
-    private LocalDateTime dataHora;
-    
-    
-     // Criar um método construtor com todos os atributos
-    public Produto(int id, char nome, char descricao, double preco, float quantidade, LocalDateTime dataHora) {
+    @Id
+    private Long id;
+    private String nome;
+    private String descricao;
+    private Double preco;
+    private Double quantidade;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    // Criar um método construtor com todos os atributos
+    public Produto(Long id, String nome, String descricao, Double preco, Double quantidade, LocalDateTime createdAt,
+            LocalDateTime updatedAt) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.dataHora = dataHora;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     // Criar os getters e setters
-    public int getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
-    public char getNome() {
+
+    public String getNome() {
         return nome;
     }
-    public void setNome(char nome) {
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    public char getDescricao() {
+
+    public String getDescricao() {
         return descricao;
     }
-    public void setDescricao(char descricao) {
+
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public double getPreco() {
+
+    public Double getPreco() {
         return preco;
     }
-    public void setPreco(double preco) {
+
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
-    public float getQuantidade() {
+
+    public Double getQuantidade() {
         return quantidade;
     }
-    public void setQuantidade(float quantidade) {
+
+    public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
     }
-    public LocalDateTime getDataHora() {
-        return dataHora;
-    }
-    public void setDataHora(LocalDateTime dataHora) {
-        this.dataHora = dataHora;
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    
-    
-    
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
 }

@@ -36,7 +36,7 @@ public class OperadorController {
     }
 
     // GET - Listar os Operadores
-    @GetMapping("")
+    @GetMapping
     public List<Operador> getOperador() {
         return operadorService.findAll();
     }
