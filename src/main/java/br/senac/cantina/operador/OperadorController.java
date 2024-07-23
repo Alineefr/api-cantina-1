@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 package br.senac.cantina.operador;
 
-=======
->>>>>>> d525f6e675e630079560525b006cbb8b840855e6
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -39,11 +36,7 @@ public class OperadorController {
     }
 
     // GET - Listar os Operadores
-<<<<<<< HEAD
-    @GetMapping
-=======
-    @GetMapping("")
->>>>>>> d525f6e675e630079560525b006cbb8b840855e6
+    @GetMapping 
     public List<Operador> getOperador() {
         return operadorService.findAll();
     }

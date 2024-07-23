@@ -1,4 +1,4 @@
-package br.senac.cantina.shared.repositories;
+package br.senac.cantina.produto;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 

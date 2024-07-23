@@ -45,7 +45,6 @@ public class OperadorServiceImpl implements OperadorService {
     public void deleteById(Long id) {
         operadorRepository.deleteById(id);
     }
-<<<<<<< HEAD
     // Atualizar senha Operador
 
     @Override
@@ -53,15 +52,6 @@ public class OperadorServiceImpl implements OperadorService {
         // Busca um Operador
         Operador operador = operadorRepository.findById(id).get();
         // Valida se o operador existe
-=======
-    
-    // Atualizar senha Operador
-    @Override
-    public void update(Long id, UpdateOperadorDto dto) {
-        // Busca a conta
-        Operador operador = operadorRepository.findById(id).get();
-        // Valida se a conta existe
->>>>>>> d525f6e675e630079560525b006cbb8b840855e6
         if (operador == null) {
             throw new RuntimeException("Operador Não Encontrado");
         }
@@ -70,8 +60,4 @@ public class OperadorServiceImpl implements OperadorService {
         operadorRepository.save(operador);
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d525f6e675e630079560525b006cbb8b840855e6
