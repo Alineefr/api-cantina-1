@@ -18,6 +18,7 @@ public class Produto {
     private LocalDateTime updatedAt;
 
     // Criar um método construtor com todos os atributos
+
     public Produto(Long id, String nome, String descricao, Double preco, Double quantidade, LocalDateTime createdAt,
             LocalDateTime updatedAt) {
         this.id = id;
@@ -28,8 +29,8 @@ public class Produto {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }
+        // Criar os getters e setters
 
-    // Criar os getters e setters
     public Long getId() {
         return id;
     }
@@ -85,4 +86,6 @@ public class Produto {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+   
 }

@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import br.senac.cantina.movimentacao.MovimentacaoRepository;
 import br.senac.cantina.movimentacao.MovimentacaoService;
 import br.senac.cantina.movimentacao.dto.CreateMovimentacaoDto;
 import br.senac.cantina.movimentacao.dto.UpdateMovimentacaoDto;
 
 import br.senac.cantina.shared.models.Movimentacao;
+import br.senac.cantina.shared.repositories.MovimentacaoRepository;
 
 @Service
 public class MovimentacaoServiceImpl implements MovimentacaoService {
