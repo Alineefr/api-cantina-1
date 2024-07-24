@@ -1,4 +1,4 @@
-package br.senac.cantina.movimentacao.impl;
+package br.senac.cantina.Movimentacao.impl;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import br.senac.cantina.movimentacao.MovimentacaoService;
-import br.senac.cantina.movimentacao.dto.CreateMovimentacaoDto;
-import br.senac.cantina.movimentacao.dto.UpdateMovimentacaoDto;
-import br.senac.cantina.movimentacao.types.TipoRegistroEnum;
+import br.senac.cantina.Movimentacao.MovimentacaoService;
+import br.senac.cantina.Movimentacao.dto.CreateMovimentacaoDto;
+import br.senac.cantina.Movimentacao.dto.UpdateMovimentacaoDto;
+import br.senac.cantina.Movimentacao.types.TipoRegistroEnum;
 import br.senac.cantina.shared.models.Movimentacao;
 import br.senac.cantina.shared.models.Produto;
 import br.senac.cantina.shared.repositories.MovimentacaoRepository;

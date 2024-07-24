@@ -1,11 +1,10 @@
-package br.senac.cantina.movimentacao;
+package br.senac.cantina.Movimentacao;
 
+import br.senac.cantina.Movimentacao.dto.CreateMovimentacaoDto;
+import br.senac.cantina.Movimentacao.dto.UpdateMovimentacaoDto;
 import br.senac.cantina.shared.models.Movimentacao;
 
 import java.util.List;
-
-import br.senac.cantina.movimentacao.dto.CreateMovimentacaoDto;
-import br.senac.cantina.movimentacao.dto.UpdateMovimentacaoDto;
 
 public interface MovimentacaoService {
 

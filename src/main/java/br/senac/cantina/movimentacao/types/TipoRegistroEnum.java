@@ -1,4 +1,4 @@
-package br.senac.cantina.movimentacao.types;
+package br.senac.cantina.Movimentacao.types;
 
 
 public enum TipoRegistroEnum {

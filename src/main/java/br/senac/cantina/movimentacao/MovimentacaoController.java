@@ -1,4 +1,4 @@
-package br.senac.cantina.movimentacao;
+package br.senac.cantina.Movimentacao;
 
 import java.util.List;
 
@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.senac.cantina.movimentacao.dto.CreateMovimentacaoDto;
-import br.senac.cantina.movimentacao.dto.UpdateMovimentacaoDto;
-import br.senac.cantina.movimentacao.impl.MovimentacaoServiceImpl;
+import br.senac.cantina.Movimentacao.dto.CreateMovimentacaoDto;
+import br.senac.cantina.Movimentacao.dto.UpdateMovimentacaoDto;
+import br.senac.cantina.Movimentacao.impl.MovimentacaoServiceImpl;
+import br.senac.cantina.shared.dto.ErrorBodyDto;
 import br.senac.cantina.shared.models.Movimentacao;
 
 @RestController
@@ -30,9 +31,16 @@ public class MovimentacaoController {
     // Criar uma nova movimentacao
 
     @PostMapping
-    public ResponseEntity<Movimentacao> save(@RequestBody CreateMovimentacaoDto dto) {
-        var saved = this.MovimentacaoService.save(dto);
-        return ResponseEntity.ok(saved);
+    public ResponseEntity<Object> save(@RequestBody CreateMovimentacaoDto dto) {
+        try{
+            var movimentacao = this.MovimentacaoService.save(dto);
+            return ResponseEntity.ok().body(movimentacao);
+        }catch (Exception e) {
+        return ResponseEntity
+        .internalServerError()
+        .body(new ErrorBodyDto(true, e.getMessage()));
+        }
+
     }
 
     // GET - Listar as movimentacoes
